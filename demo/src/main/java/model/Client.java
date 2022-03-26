@@ -17,13 +17,13 @@ public class Client {
     private boolean isActive;
     private String password;
 
-    public Client(String firstName, String lastName, String mail, String phoneNumber, String DNI, boolean isActive, String password) {
+    public Client(String firstName, String lastName, String mail, String phoneNumber, String DNI, String password) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.mail = mail;
         this.phoneNumber = phoneNumber;
         this.DNI = DNI;
-        this.isActive = isActive;
+        this.isActive = false;
         this.password = password;
     }
 
