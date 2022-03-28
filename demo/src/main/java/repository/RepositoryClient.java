@@ -1,5 +1,6 @@
 package repository;
 
+import model.Client;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
