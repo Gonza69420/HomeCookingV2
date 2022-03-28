@@ -1,7 +1,5 @@
 package repository;
 
-import model.Chef;
-import model.Client;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;

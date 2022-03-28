@@ -36,6 +36,8 @@ public class Client {
                 id, firstName, lastName, mail, phoneNumber, DNI, isActive, password);
     }
 
+    public Solicitude createSolicitude(Chef chef, String date, Menu[] menuItems, boolean status){return new Solicitude(this, chef, date, menuItems, status);}
+
     public String getFirstName() {
         return firstName;
     }
