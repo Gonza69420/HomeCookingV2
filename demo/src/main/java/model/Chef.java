@@ -8,7 +8,7 @@ public class Chef {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "id", nullable = false)
-    private int id;
+    private Long id;
     private String firstName;
     private String lastName;
     private String mail;
@@ -23,11 +23,11 @@ public class Chef {
 
 
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -49,28 +49,67 @@ public class Chef {
                 id, firstName, lastName, mail, phoneNumber, DNI, isActive, password);
     }
 
-    public Menu createMenu(String name, String description, int price, String category){ //TODO: Pensar como meter imagenes
-        return new Menu(name, description, price, category);
+    public String getFirstName() {
+        return firstName;
     }
-    public void acceptSolicitude(Solicitude solicitude){solicitude.setStatus(true);}
-    public void denySolicitude(Solicitude solicitude){solicitude.setStatus(false);}
 
-    public String getFirstName() {return firstName;}
+    public void setFirstName(String fistName) {
+        this.firstName = fistName;
+    }
 
-    public String getLastName() {return lastName;}
+    public String getLastName() {
+        return lastName;
+    }
 
-    public String getMail() {return mail;}
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
 
-    public String getPassword() {return password;}
+    public String getMail() {
+        return mail;
+    }
 
-    public String getPhone() {return phoneNumber;}
+    public void setMail(String mail) {
+        this.mail = mail;
+    }
 
-    public String getAddress() {return address;}
+    public String getPassword() {
+        return password;
+    }
 
-    public Boolean getActive() {return isActive;}
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
-    public String getDNI() {return DNI;}
+    public String getPhone() {
+        return phoneNumber;
+    }
 
-    private void setPassword(String password) {this.password = password;} //To be used only by the system when the user forgets the password
+    public void setPhone(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
 
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public Boolean getActive() {
+        return isActive;
+    }
+
+    public void setActive(Boolean active) {
+        isActive = active;
+    }
+
+    public String getDNI() {
+        return DNI;
+    }
+
+    public void setDNI(String DNI) {
+        this.DNI = DNI;
+    }
 }
