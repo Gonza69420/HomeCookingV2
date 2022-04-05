@@ -47,4 +47,9 @@ public class MainController {
         clientRepository.deleteById(id);
         return "Deleted";
     }
+
+    public Client getClient(String DNI) {
+        return clientRepository.findByDNI(DNI);
+
+    }
 }

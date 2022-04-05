@@ -24,4 +24,6 @@ public class HomeController {
     public Principal user(Principal principal) {
         return principal;
     }
+
+
 }

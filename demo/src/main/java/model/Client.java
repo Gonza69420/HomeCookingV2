@@ -6,7 +6,7 @@ import javax.persistence.*;
 @Entity
 public class Client {
     @Id
-    @GeneratedValue(generator = "increment")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "ID")
     private Long id;
     private String firstName;

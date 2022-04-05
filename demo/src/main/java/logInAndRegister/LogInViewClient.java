@@ -1,6 +1,7 @@
 package logInAndRegister;
 
 
+import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.login.LoginForm;
 import com.vaadin.flow.component.login.LoginOverlay;
@@ -21,7 +22,7 @@ public class LogInViewClient extends VerticalLayout implements BeforeEnterObserv
         LoginOverlay loginOverlay = new LoginOverlay();
         loginOverlay.setTitle("HomeCooking");
         loginOverlay.setDescription("Restaurant quality food from the comfort of your home");
-
+        Button RegisterButton = new Button("Register");
         addClassName("login-view");
         setSizeFull();
         setAlignItems(Alignment.CENTER);
