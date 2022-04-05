@@ -140,7 +140,7 @@
       "workbox-precaching": "6.5.0",
       "workbox-webpack-plugin": "6.5.0"
     },
-    "hash": "7e664f9f04156a3d96f9c78fc483f7be7805b3339057c72d5de5572b2e6d46ea"
+    "hash": "d588a107864d95d1258e1e8063c3a6532cb0a071dce53002da85a8a615a9e24c"
   },
   "dependencies": {
     "@polymer/iron-icon": "3.0.1",
@@ -174,7 +174,7 @@
     "@vaadin/email-field": "23.0.2",
     "@vaadin/field-base": "23.0.2",
     "@vaadin/field-highlighter": "23.0.2",
-    "@vaadin/flow-frontend": "./target/flow-frontend",
+    "@vaadin/flow-frontend": "./build/flow-frontend",
     "@vaadin/form-layout": "23.0.2",
     "@vaadin/grid": "23.0.2",
     "@vaadin/grid-pro": "23.0.2",
@@ -260,10 +260,10 @@
     "lit": "2.1.4"
   },
   "devDependencies": {
-    "@vaadin/application-theme-plugin": "./target/plugins/application-theme-plugin",
-    "@vaadin/build-status-plugin": "./target/plugins/build-status-plugin",
-    "@vaadin/theme-live-reload-plugin": "./target/plugins/theme-live-reload-plugin",
-    "@vaadin/theme-loader": "./target/plugins/theme-loader",
+    "@vaadin/application-theme-plugin": "./build/plugins/application-theme-plugin",
+    "@vaadin/build-status-plugin": "./build/plugins/build-status-plugin",
+    "@vaadin/theme-live-reload-plugin": "./build/plugins/theme-live-reload-plugin",
+    "@vaadin/theme-loader": "./build/plugins/theme-loader",
     "chokidar": "^3.5.0",
     "compression-webpack-plugin": "4.0.1",
     "css-loader": "5.2.7",
@@ -400,6 +400,7 @@
     "construct-style-sheets-polyfill": "$construct-style-sheets-polyfill",
     "lit": "$lit",
     "chokidar": "$chokidar",
-    "date-fns": "$date-fns"
+    "date-fns": "$date-fns",
+    "@vaadin/flow-frontend": "$@vaadin/flow-frontend"
   }
 }
