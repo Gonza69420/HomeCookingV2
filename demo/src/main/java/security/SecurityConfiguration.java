@@ -8,10 +8,12 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.web.savedrequest.RequestCache;
 
 @Configuration
 @EnableWebSecurity
@@ -26,11 +28,12 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
             .anyRequest().authenticated()
             .and()
             .formLogin()
-            .loginPage("/chef/login")
+            .loginPage("/client/login")
             .permitAll()
             .and()
             .logout()
             .permitAll();
+
     }
 
 
@@ -41,5 +44,35 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         provider.setUserDetailsService(userDetailsService);
         provider.setPasswordEncoder(new BCryptPasswordEncoder());
         return  provider;
+    }
+
+    /**
+     * Allows access to static resources, bypassing Spring security.
+     */
+    @Override
+    public void configure(WebSecurity web) throws Exception {
+        web.ignoring().antMatchers(
+
+                "/VAADIN/**",
+
+                // the standard favicon URI
+                "/favicon.ico",
+
+                // the robots exclusion standard
+                "/robots.txt",
+
+
+                "/manifest.webmanifest",
+                "/sw.js",
+                "/offline-page.html",
+
+
+                "/frontend/**",
+
+
+                "/webjars/**",
+
+
+                "/frontend-es5/**", "/frontend-es6/**");
     }
 }
