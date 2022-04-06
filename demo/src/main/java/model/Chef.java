@@ -4,7 +4,7 @@ package model;
 import javax.persistence.*;
 
 @Entity
-public class Chef {
+public class Chef extends User {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "id", nullable = false)
@@ -18,18 +18,7 @@ public class Chef {
     private Boolean isActive;
     private String DNI;
 
-    public Chef() {
-    }
-
-
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
+    protected Chef() {}
 
     public Chef(String fistName, String lastName, String mail, String password, String phoneNumber, String address, Boolean isActive, String DNI) {
         this.firstName = fistName;
@@ -41,7 +30,9 @@ public class Chef {
         this.isActive = isActive;
         this.DNI = DNI;
     }
-
+    public int getId() {
+        return id;
+    }
     @Override
     public String toString() {
         return String.format(

@@ -4,7 +4,7 @@ package model;
 import javax.persistence.*;
 
 @Entity
-public class Client {
+public class Client extends User {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "ID")
@@ -26,7 +26,6 @@ public class Client {
         this.isActive = false;
         this.password = password;
     }
-
     protected Client() {}
 
     @Override

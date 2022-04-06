@@ -1,6 +1,5 @@
 package logInAndRegister;
 
-import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.login.LoginForm;
 import com.vaadin.flow.component.login.LoginOverlay;
@@ -9,20 +8,20 @@ import com.vaadin.flow.router.BeforeEnterEvent;
 import com.vaadin.flow.router.BeforeEnterObserver;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
+import org.springframework.web.bind.annotation.GetMapping;
 
 @Route("chef/login")
 @PageTitle("Log In | Chef")
-
 public class LogInViewChef extends VerticalLayout implements BeforeEnterObserver {
-
-   private final LoginForm login = new LoginForm();
-
+    private final LoginForm login = new LoginForm();
 
     public  LogInViewChef() {
         LoginOverlay loginOverlay = new LoginOverlay();
         loginOverlay.setTitle("HomeCooking");
         loginOverlay.setDescription("Delivering your best food to admirers");
-        Button RegisterButton = new Button("Register");
+        loginOverlay.setError(true);
+        add(loginOverlay); //No se si es necesario
+        loginOverlay.setOpened(true);//No se si es necesario
 
         addClassName("login-view");
         setSizeFull();
