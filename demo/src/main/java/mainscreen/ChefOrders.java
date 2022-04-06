@@ -1,5 +1,5 @@
 package mainscreen;
-//import com.vaadin.demo.DemoExporter;
+
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
 import com.vaadin.flow.component.html.H1;
@@ -11,10 +11,10 @@ import com.vaadin.flow.component.tabs.Tabs;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.router.RouterLink;
 
-@Route("client/dashboard")
-public class MainScreenClient extends AppLayout {
+@Route("chef/orders")
+public class ChefOrders extends AppLayout {
 
-    public MainScreenClient() {
+    public ChefOrders() {
         DrawerToggle toggle = new DrawerToggle();
 
         H1 title = new H1("HomeCooking");

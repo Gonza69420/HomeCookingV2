@@ -11,7 +11,7 @@ import com.vaadin.flow.component.tabs.Tabs;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.router.RouterLink;
 
-@Route("main-screen-chef")
+@Route("chef/dashboard")
 public class MainScreenChef extends AppLayout {
 
     public MainScreenChef() {
