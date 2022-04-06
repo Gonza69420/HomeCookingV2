@@ -8,4 +8,5 @@ import java.util.List;
 public interface RepositoryChef extends CrudRepository<Chef, Long> {
     List<Chef> findByLastName(String lastName);
     List<Chef> findBymail(String mail);
+    Chef findByEmail(String email);
 }

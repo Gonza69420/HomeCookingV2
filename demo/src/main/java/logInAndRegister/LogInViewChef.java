@@ -10,7 +10,7 @@ import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import org.springframework.web.bind.annotation.GetMapping;
 
-@Route("chef/login")
+@Route("login/chef")
 @PageTitle("Log In | Chef")
 public class LogInViewChef extends VerticalLayout implements BeforeEnterObserver {
     private final LoginForm login = new LoginForm();

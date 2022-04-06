@@ -7,7 +7,6 @@ public abstract class User {
     private String password;
     private String phone;
 
-
     public String getEmail() {return email;}
 
     public String getPassword() {return password;}

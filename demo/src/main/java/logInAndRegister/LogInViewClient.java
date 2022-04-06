@@ -10,8 +10,7 @@ import com.vaadin.flow.router.BeforeEnterObserver;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 
-@Route("/client/login")
-
+@Route("login/client")
 @PageTitle("Log In | Client")
 public class LogInViewClient extends VerticalLayout implements BeforeEnterObserver {
 

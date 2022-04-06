@@ -1,12 +1,15 @@
 package repository;
 
 import model.Client;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
 
-public interface RepositoryClient extends CrudRepository<Client, Long> {
+public interface RepositoryClient extends JpaRepository<Client,Long> { //extends CrudRepository<Client, Long>
+
+    Client findByEmail(String email);
 
     @Query("select c from Client c where c.lastName like %?1%")
     List<Client> findByLastName(String lastName);

@@ -11,8 +11,7 @@ class HomecookingApplicationTests {
 	@Test
 	void contextLoads() {
 		//funca
-		//ClientDAO.createClient(new Client("test", "test", "test", "test", "test", "test" ));
-
+		ClientDAO.createClient(new Client("test", "test", "test", "test", "test", "test" ));
 		System.out.println(ClientDAO.getClient(1).getDNI());
 	}
 }
