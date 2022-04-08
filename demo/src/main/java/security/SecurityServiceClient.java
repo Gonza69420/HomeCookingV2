@@ -15,7 +15,7 @@ public class SecurityServiceClient implements UserDetailsService {
     private RepositoryClient userRepository;
 
     @Override
-    public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
+    public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException { //Make both clients and chefs to be able to login with email.
 
         Client client = userRepository.findByEmail(email);
         if(client ==null) {
